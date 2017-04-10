@@ -17,7 +17,8 @@ RUN yum install -y ambari-agent \
 	pig_* \
 	lzo \
 	snappy-devel \
-	rpcbind
+	rpcbind \
+	druid
 
 # Remove hdp repo and clean up the yum cache to trim some size down.
 RUN rm /etc/yum.repos.d/hdp*.repo && yum clean all
