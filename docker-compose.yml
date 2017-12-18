@@ -5,6 +5,8 @@ services:
     build:
         context: ./images/streamline
         dockerfile: Dockerfile
+        args:
+            STREAMLINE_VERSION: 0.1.0-SNAPSHOT
     image: jdye64/streamline-demo:streamline-0.1.0-SNAPSHOT
     networks:
       - dev
@@ -19,6 +21,8 @@ services:
     build:
         context: ./images/registry
         dockerfile: Dockerfile
+        args:
+            REGISTRY_VERSION: 0.3.0-SNAPSHOT
     image: jdye64/registry-demo:0.3.0-SNAPSHOT
     networks:
       - dev
